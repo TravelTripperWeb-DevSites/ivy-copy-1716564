@@ -9,4 +9,9 @@ angular.module('rezTrip')
       return  text ? String(text).replace('["', '<p>').replace('"]', '</p>').replace(',',' ') : '';
     }
   }
-);
+)
+.filter('ampersand', function(){
+    return function(input){
+        return input ? input.replace(/&amp;/, '&') : '';
+    }
+});
