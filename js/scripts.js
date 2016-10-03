@@ -139,6 +139,7 @@ $('#homeCarousel,#specialsCarousel').carousel({
   cycle: true
 }); 
 
+
   // title equal heights
   
 $(window).on('load resize', function () {
