@@ -4,93 +4,17 @@ title: Hotels in Key West Florida | 24 North Hotel Key West
 excerpt: 24 North Hotel Key West offers boutique accommodations in Key West Florida. Book your Ocean-View accommodation here on the Official Website of 24 North Hotel!
 ---
 
-<section>
-  <div class="home-banner-wrap">
-    <div id="homeCarousel" class="carousel slide"> 
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#homeCarousel" data-slide-to="1"></li>
-        <li data-target="#homeCarousel" data-slide-to="2"></li>
-        <li data-target="#homeCarousel" data-slide-to="3"></li>
-        <li data-target="#homeCarousel" data-slide-to="4"></li>
-      </ol>
-      
-      <!-- Wrapper for Slides -->
-      <div class="carousel-inner" rt3-recent-bookings="recentBookings" rt3-rooms-browser="browser" rt3-search-form="search" on-search-changed="browser.tonightRate()" ng-cloak>
-      
-              <div class="item active"> <img src="../images/home-carousel-2.jpg" alt=""/>
-          <div class="carousel-caption transparent-bg">
-            <div class="caption-inner">
-              <p>Endless Summer</p>
-              <h1>Holiday dream come true</h1>
-              <div><a href="/specials/" class="button-common">View Specials <i class="fa fa-play"></i></a></div>
-            </div>
-          </div>
-          <div class="caption-price"> <span class="price-holder"><span>[[ recentBookings.totalBookings ]]</span>People booked our hotel in the last 2 days</span> <span class="price-holder"><span>[[ browser.toNightsRate ]]</span>Tonight’s Rate</span></div>
-        </div>
-      
-        <div class="item"> <img src="../images/home-carousel-1.jpg" alt=""/>
-          <div class="carousel-caption transparent-bg">
-            <div class="caption-inner">
-              <p>Paradise Found</p>
-              <h1>24 north hotel key west</h1>
-              <div><a href="/location/" class="button-common">Discover More <i class="fa fa-play"></i></a></div>
-            </div>
-          </div>
-         <div class="caption-price"> <span class="price-holder"><span>[[ recentBookings.totalBookings ]]</span>People booked our hotel in the last 2 days</span> <span class="price-holder"><span>[[ browser.toNightsRate ]]</span>Tonight’s Rate</span></div>
-        </div>
-        
-        
-         <div class="item"> <img src="../images/home-carousel-3.jpg" alt=""/>
-          <div class="carousel-caption transparent-bg">
-            <div class="caption-inner">
-              <p>Perfect Stay</p>
-              <h1>Live in style and comfort</h1>
-              <div><a href="/rooms/" class="button-common">View Rooms<i class="fa fa-play"></i></a></div>
-            </div>
-          </div>
-           <div class="caption-price"> <span class="price-holder"><span>[[ recentBookings.totalBookings ]]</span>People booked our hotel in the last 2 days</span> <span class="price-holder"><span>[[ browser.toNightsRate ]]</span>Tonight’s Rate</span></div>
-        </div>
-        
-        <div class="item"> <img src="../images/home-carousel-4.jpg" alt=""/>
-          <div class="carousel-caption transparent-bg">
-            <div class="caption-inner">
-              <p>Dive Into</p>
-              <h1>A world of adventure</h1>
-              <div><a href="/gallery/" class="button-common">View Gallery<i class="fa fa-play"></i></a></div>
-            </div>
-          </div>
-          <div class="caption-price"> <span class="price-holder"><span>[[ recentBookings.totalBookings ]]</span>People booked our hotel in the last 2 days</span> <span class="price-holder"><span>[[ browser.toNightsRate ]]</span>Tonight’s Rate</span></div>
-        </div>
-        
-        <div class="item"> <img src="../images/home-carousel-5.jpg" alt=""/>
-          <div class="carousel-caption transparent-bg">
-            <div class="caption-inner">
-              <p>Tranquil Haven</p>
-              <h1>Destination Divine</h1>
-              <div><a href="/location/" class="button-common">View Location<i class="fa fa-play"></i></a></div>
-            </div>
-          </div>
-          <div class="caption-price"> <span class="price-holder"><span>[[ recentBookings.totalBookings ]]</span>People booked our hotel in the last 2 days</span> <span class="price-holder"><span>[[ browser.toNightsRate ]]</span>Tonight’s Rate</span></div>
-        </div>
-        
-      </div>
-    </div>
-    <!--<div class="theme-left-panel">
-      <div class="languages"><a href="#">English</a><a href="#">Español</a><a href="#">Deutsch</a></div>
-    </div>-->
-    <div class="theme-right-panel">
-      <div class="social-right"><!-- <a href="#"><i class="fa fa-instagram"></i></a> --><a href="https://www.facebook.com/24-North-Hotel-190785077925312/" target="_blank"><i class="fa fa-facebook"></i></a> <!--<a href="#"><i class="fa fa-twitter"></i></a> --></div>
-    </div>
-  </div>
-</section>
-<section>
+{% include home-banner.html %}
+
+<section id="about">
   <div class="container-fluid blue-bg">
     <div class="about-wrap">
+      {% region about-main %}
       <h1>24 north hotel Key West</h1>
       <p>Our hotel is located at the point of entry to Key West and convenient to everything in Old Town and across the island. Key West, also known as Cayo Hueso, is a 2-mile-by-4-mile island located at the southernmost tip of the continental U.S. at the tail end of the 120-mile-long Florida Keys island chain, just 90 miles from Cuba. Key West International Airport is a 10 minute drive to 24 North Hotel. Alternatively, guests can arrive by ferry from Fort Myers via Key West Express.</p>
-      <div class="btn-holder"><a href="/specials/" class="button-common">View Specials <i class="fa fa-play"></i></a></div>
+      <div class="btn-holder">
+        <a href="/specials/" class="button-common">View Specials <i class="fa fa-play"></i></a>
+      </div>
       <div class="graphic-1"><img src="/images/floating/stamp-1.png" alt=""/></div>
       <div class="graphic-2"><img src="/images/floating/curves-1.png" alt=""/></div>
     </div>
@@ -100,19 +24,27 @@ excerpt: 24 North Hotel Key West offers boutique accommodations in Key West Flor
   <div class="container-fluid no-padding two-col-wrap">
     <div class="col-sm-6 no-padding v-center">
       <div class="two-col-content">
+        {% region about-section-1 %}
         <h3>Paradise Found</h3>
         <p>Come to 24 North Hotel and soak in Key West. Our concierge can curate personalized experiences such as yoga, pilates, spa services, bicycle and scooter rentals, snorkeling and diving, seaplane tours, catamaran sailing, parasailing, deep sea fishing, and much more.</p>
         <div class="logo-icon"><img src="../images/logo-24.jpg" alt="24 North Hotel Key West"/></div>
       </div>
     </div>
-    <div class="col-sm-6 no-padding v-center"><img src="/images/two-col-1.jpg" alt="Paradise Found"/></div>
+    <div class="col-sm-6 no-padding v-center">
+      {% region about-image-1 type: image %}
+      <img src="/images/two-col-1.jpg" alt="Paradise Found"/>
+    </div>
   </div>
 </section>
 <section class="about-home">
   <div class="container-fluid no-padding two-col-wrap">
-    <div class="col-sm-6 no-padding v-center"><img src="/images/two-col-2.jpg" alt="About the Hotel"/></div>
+    <div class="col-sm-6 no-padding v-center">
+      {% region about-image-2 type: image %}
+      <img src="/images/two-col-2.jpg" alt="About the Hotel"/>
+    </div>
     <div class="col-sm-6 no-padding v-center">
       <div class="two-col-content">
+        {% region about-section-2 %}        
         <h3>About the hotel</h3>
         <p>24 North Hotel offers standard, pool view, and oceanfront rooms with premium features and in-room amenities. Rooms are equipped with a 48" LCD TV, microwave, refrigerator, oversized lounge chair and ottoman, bath with granite counter tops, and exceptionally comfortable and clean beds.</p>
         <!--<div class="btn-holder"><a href="#" class="button-common btn-blue">View this suite<i class="fa fa-play"></i></a></div>-->

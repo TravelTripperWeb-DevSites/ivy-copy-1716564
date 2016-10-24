@@ -1,6 +1,6 @@
 _site
 .sass-cache
 .jekyll-metadata
-sitemap.js
+sitemap.json
 .DS_Store
 .idea
