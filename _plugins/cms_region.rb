@@ -2,7 +2,19 @@ module Jekyll
   class CmsRegionTag < Liquid::Tag
     def initialize(tag_name, text, tokens)
       super
-      @filename = text.strip + '.json'
+      
+      params = text.to_s.strip.split(',')
+      @filename = params.shift.strip + '.json'
+      @options = process_params(params)
+    end
+
+    def process_params(params)
+      kv_params = {}
+      params.each do |kvstr|
+        kv_arr = kvstr.to_s.strip.split(':')
+        kv_params[kv_arr[0].strip] = kv_arr[1].to_s.strip
+      end
+      return kv_params
     end
 
     def render(context)
@@ -19,7 +31,8 @@ module Jekyll
 
       site.data['regions'] << File.join(page_folder, @filename)
 
-      wrap('div', 'class' => 'tt-region', 'data-region' => File.join(site.active_lang, page_folder, @filename)) do
+      region_type = @options['type'] || 'html'
+      wrap('div', 'class' => 'tt-region', 'data-region' => File.join(site.active_lang, page_folder, @filename), 'data-region-type' => region_type) do
         if region_items.size == 0
           include(include_data_path, context, 0, {"_template"=>"html"})
         else
